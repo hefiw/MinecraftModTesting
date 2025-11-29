@@ -1,5 +1,6 @@
 package com.minecraftmod;
 
+import com.minecraftmod.core.registry.MMBlock;
 import com.minecraftmod.core.registry.MMCreativeTabs;
 import com.minecraftmod.core.registry.MMItem;
 import net.minecraft.world.item.CreativeModeTab;
@@ -29,6 +30,7 @@ public class MinecraftModTest {
 
         //Регистрация предметов
         MMItem.register(modEventBus);
+        MMBlock.register(modEventBus);
         MMCreativeTabs.register(modEventBus);
 
         MinecraftForge.EVENT_BUS.register(this);
